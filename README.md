@@ -211,5 +211,3 @@ Pendiente:
 * Panel web administrativo
 * Sincronización en tiempo real
 * Gestión avanzada de seguridad
-
-```
