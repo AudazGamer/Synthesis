@@ -213,4 +213,3 @@ Pendiente:
 * Gestión avanzada de seguridad
 
 ```
-```
