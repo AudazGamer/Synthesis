@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ITSA SoftGuard — Control de Software</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="logo">
+        <div class="logo-icon">🛡</div>
+        <div>
+          <div class="logo-text">ITSA SoftGuard</div>
+          <div class="logo-sub">Control de software</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <div class="nav-section">Sistema</div>
+        <div class="nav-item active" data-section="apps">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          <span>Aplicaciones</span>
+          <span class="nav-badge" id="nav-total">0</span>
+        </div>
+        <div class="nav-item" data-section="events">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <span>Eventos</span>
+        </div>
+        <div class="nav-item" data-section="hash">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/></svg>
+          <span>Hashes</span>
+        </div>
+        <div class="nav-section">Gestión</div>
+        <div class="nav-item" data-section="users">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>Usuarios</span>
+        </div>
+        <div class="nav-item" data-section="policies">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span>Políticas</span>
+        </div>
+        <div class="nav-item" data-section="monitors">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <span>Equipos</span>
+        </div>
+        <div class="nav-section">Config</div>
+        <div class="nav-item" data-section="settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          <span>Ajustes</span>
+        </div>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="avatar">A</div>
+        <div class="user-info">
+          <div class="user-name">Admin ITSA</div>
+          <div class="user-role">Administrador</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+      <!-- TOPBAR -->
+      <div class="topbar">
+        <span class="topbar-title">Catálogo de aplicaciones</span>
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input class="search" id="search-input" type="text" placeholder="Buscar por nombre o categoría…" />
+        </div>
+        <button class="btn btn-danger" id="btn-delete-selected" style="display:none">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+          Eliminar selección
+        </button>
+        <button class="btn btn-primary" id="btn-add">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Agregar
+        </button>
+      </div>
+
+      <!-- STATS -->
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="stat-label">Total</div>
+          <div class="stat-val" id="stat-total">0</div>
+          <div class="stat-sub">en catálogo</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Activas</div>
+          <div class="stat-val blue" id="stat-active">0</div>
+          <div class="stat-sub">descargando ahora</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Completadas</div>
+          <div class="stat-val green" id="stat-completed">0</div>
+          <div class="stat-sub">instaladas</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Bloqueadas</div>
+          <div class="stat-val red" id="stat-blocked">0</div>
+          <div class="stat-sub">no autorizadas</div>
+        </div>
+      </div>
+
+      <!-- TABS -->
+      <div class="tabs">
+        <div class="tab active" data-tab="all">Todas</div>
+        <div class="tab" data-tab="downloading">Descargando</div>
+        <div class="tab" data-tab="completed">Completadas</div>
+        <div class="tab" data-tab="paused">Pausadas</div>
+        <div class="tab" data-tab="blocked">Bloqueadas</div>
+      </div>
+
+      <!-- TABLE -->
+      <div class="table-area">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th class="cell-check"><input type="checkbox" id="check-all" /></th>
+                <th>Aplicación</th>
+                <th>Estado</th>
+                <th>Tamaño</th>
+                <th>Progreso</th>
+                <th>Categoría</th>
+                <th>Hash SHA-256</th>
+                <th>Agregada</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+              <tr>
+                <td colspan="9">
+                  <div class="empty">
+                    <div class="empty-title">Cargando aplicaciones…</div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- MODAL AGREGAR -->
+  <div class="overlay" id="modal-add" style="display:none">
+    <div class="modal">
+      <div class="modal-title">Agregar aplicación</div>
+      <div class="modal-sub">La aplicación quedará pendiente de aprobación por un administrador.</div>
+      <div class="form-group">
+        <label class="form-label">Nombre de la aplicación</label>
+        <input class="form-input" id="add-name" type="text" placeholder="Ej: Node.js 20 LTS" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Categoría</label>
+        <select class="form-select" id="add-category">
+          <option value="education">Education</option>
+          <option value="development">Development</option>
+          <option value="multimedia">Multimedia</option>
+          <option value="productivity">Productivity</option>
+          <option value="communication">Communication</option>
+          <option value="gaming">Gaming</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Hash SHA-256 del instalador</label>
+        <input class="form-input" id="add-hash" type="text" placeholder="a1b2c3d4e5f6…" />
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" id="btn-cancel-add">Cancelar</button>
+        <button class="btn btn-primary" id="btn-confirm-add">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Agregar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL CONFIRMAR ELIMINAR -->
+  <div class="overlay" id="modal-confirm" style="display:none">
+    <div class="modal">
+      <div class="modal-title" id="confirm-title">¿Eliminar aplicación?</div>
+      <div class="modal-sub" id="confirm-sub">Esta acción no se puede deshacer.</div>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" id="btn-cancel-confirm">Cancelar</button>
+        <button class="btn btn-danger" id="btn-ok-confirm">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg>
+          Eliminar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOASTS -->
+  <div class="toast-wrap" id="toast-wrap"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
